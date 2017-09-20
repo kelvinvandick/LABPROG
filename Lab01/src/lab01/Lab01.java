@@ -1,46 +1,41 @@
-/*
- Universidade Estadual da Paraíba / Centro de Ciências e Tecnologias - CCT /
-Departamento de Computação / Curso de Bacharelado em Ciência da Computação
-Componente Curricular: Laboratorio de Programação
-Aluno: Kelvin Vandick de Sousa - Mat.: 141085134
+/* Universidade Estadual da Paraíba
+*  Atividade de Laboratório 01 - Prof.: Daniel Gondim
+*  Alunos: Higor Pereira / Lanmark Rafael / Danilo de Souza
  */
 package lab01;
 
-/**
- *
- * @author kelvin Vandick
- */
 import java.util.Scanner;
 
 public class Lab01 {
 
     public static void main(String[] args) {
         
-        float n, max=0, min=0, aux;
-       
-        int contador = 1;
+        float num, maior, menor, numeroCompare;
+        maior = 0;
+        menor = 0;
+        int count = 1;
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Digite a quatidade de numeros a serem comparados: ");
-        aux = entrada.nextFloat();
+        System.out.println("Informe a quantidade de números a serem comparados: ");
+        numeroCompare = entrada.nextFloat();
 
-        while (contador <= aux) {
-            System.out.print("n " + contador + " : ");
-            n = entrada.nextFloat();
+        while (count <= numeroCompare) {
+            System.out.print("Numero " + count + " : ");
+            num = entrada.nextFloat();
 
-            if (max == 0 && min == 0) {
-                max = n;
-                min = n;
+            if (maior == 0 && menor == 0) {
+                maior = num;
+                menor = num;
             }
-            if (n > max) {
-                max = n;
+            if (num > maior) {
+                maior = num;
             }
-            if (n < min) {
-                min = n;
+            if (num < menor) {
+                menor = num;
             }
-            contador++;
+            count++;
         }
-        System.out.println("O maior numero é: " + max);
-        System.out.println("O menor numero é: " + min);
+        System.out.println("O maior número informado foi: " + maior);
+        System.out.println("O menor número informado foi: " + menor);
     }
 }
